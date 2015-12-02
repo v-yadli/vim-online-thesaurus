@@ -19,9 +19,9 @@ if has("win32")
     elseif isdirectory('C:\\Program Files\\Git')
         let &shell        = 'C:\\Program Files\\Git\\bin\\bash.exe'
         let s:sort        = "C:\\Program Files\\Git\\bin\\sort.exe"
-    elseif isdirectory($USERPROFILE.'\\AppData\\Local\\Programs\\Git')
-        let &shell        = $USERPROFILE.'\\AppData\\Local\\Programs\\Git\\bin\\bash.exe'
-        let s:sort        = $USERPROFILE.'\\AppData\\Local\\Programs\\Git\\bin\\sort.exe'
+    elseif isdirectory($LOCALAPPDATA.'\\Programs\\Git')
+        let &shell        = $LOCALAPPDATA.'\\Programs\\Git\\bin\\bash.exe'
+        let s:sort        = $LOCALAPPDATA.'\\Programs\\Git\\bin\\sort.exe'
     else
         echoerr 'vim-thesaurus: Cannot find git installation.'
     endif
